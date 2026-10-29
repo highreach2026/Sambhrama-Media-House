@@ -1,0 +1,1 @@
+import{r as s,f as t,y as r}from"./DGXuxBqh.js";function l(o=20){const e=s(!1),n=()=>{window.scrollY>o?e.value=!0:e.value=!1};return t(()=>window.addEventListener("scroll",n)),r(()=>window.removeEventListener("scroll",n)),{isSticky:e}}export{l as u};

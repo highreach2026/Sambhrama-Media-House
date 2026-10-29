@@ -1,0 +1,1 @@
+import{g as o}from"./BQIAqN5T.js";import{$ as g}from"./DGXuxBqh.js";function s(){g(".moving-text").length>0&&o.utils.toArray(".moving-text").forEach((r,i)=>{const t=r.querySelector(".wrapper-text");if(!t)return;const[e,f]=i%2?[r.offsetWidth-t.scrollWidth,0]:[0,r.offsetWidth-t.scrollWidth];o.fromTo(t,{x:e},{x:f,scrollTrigger:{trigger:r,scrub:.1}})})}export{s as m};

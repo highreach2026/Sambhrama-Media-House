@@ -1,0 +1,1 @@
+import{_ as n,c as o,o as t,a as s}from"./DGXuxBqh.js";const r={},_={width:"20",height:"24",viewBox:"0 0 20 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"};function c(a,e){return t(),o("svg",_,[...e[0]||(e[0]=[s("path",{d:"M20 12L0.5 23.2583V0.74167L20 12Z",fill:"currentcolor"},null,-1)])])}const i=Object.assign(n(r,[["render",c]]),{__name:"SvgVideoPlayOne"});export{i as _};

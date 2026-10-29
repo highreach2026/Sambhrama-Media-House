@@ -1,0 +1,1 @@
+function u(){const c=(t,o)=>{const n=o.querySelector(".tp-award-box-left"),e=o.querySelector(".tp-award-reveal-img");if(n&&e){const s=n.getBoundingClientRect(),r=t.clientX-s.left,a=t.clientY-s.top;e.style.transform=`translate(${r-e.offsetWidth/2}px, ${a-e.offsetHeight/2}px)`}};return{handleMouseMove:(t,o)=>{const e=t.currentTarget.closest(o);e&&c(t,e)}}}export{u};
