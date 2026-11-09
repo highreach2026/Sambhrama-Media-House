@@ -2,10 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const baseDir = path.join(__dirname, "Website", "Sambhrama Media House", "Sambhrama Media House", "Sambhrama Media House");
-const primaryRoot = path.join(baseDir, "sambhrama-media-house");
-const fallbackRoot = path.join(baseDir, "agntix-vue-nuxt.netlify.app");
-const appRoot = fs.existsSync(primaryRoot) ? primaryRoot : fallbackRoot;
+const appRoot = __dirname;
 const port = process.env.PORT || 3000;
 
 const mimeTypes = {
@@ -22,11 +19,15 @@ const mimeTypes = {
   ".woff2": "font/woff2",
   ".woff": "font/woff",
   ".ttf": "font/ttf",
-  ".eot": "application/vnd.ms-fontobject"
+  ".otf": "font/otf",
+  ".eot": "application/vnd.ms-fontobject",
+  ".ico": "image/x-icon"
 };
 
 const server = http.createServer((req, res) => {
-  let reqPath = decodeURIComponent((req.url || "/").split("?")[0]);
+  let reqPath = decodeURIComponent((req.url || "/").split("?")[0])
+    .replace(/[\u2010-\u2015\u2212]/g, "-")
+    .replace(/[\u2018-\u201F"'\s]+$/g, "");
 
   for (const marker of ["/sambhrama-media-house", "/agntix-vue-nuxt.netlify.app"]) {
     const idx = reqPath.indexOf(marker);
@@ -46,9 +47,6 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = path.join(appRoot, reqPath);
-  if (!fs.existsSync(filePath) && reqPath.startsWith("/cdnjs.cloudflare.com/")) {
-    filePath = path.join(baseDir, reqPath);
-  }
   if (!fs.existsSync(filePath) && fs.existsSync(filePath + ".html")) {
     filePath += ".html";
   }
