@@ -1,6 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/_nuxt/(.*)", "destination": "/_nuxt/$1" },
+    { "source": "/img/(.*)", "destination": "/img/$1" },
+    { "source": "/cdnjs.cloudflare.com/(.*)", "destination": "/cdnjs.cloudflare.com/$1" }
+  ],
   "redirects": [
     { "source": "/", "destination": "/dark/creative-agency.html", "permanent": false },
     { "source": "/index.html", "destination": "/dark/creative-agency.html", "permanent": false },
