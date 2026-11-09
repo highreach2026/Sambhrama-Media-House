@@ -1,0 +1,4 @@
+# Keep Vercel deployment purely static (no Node server function)
+server.js
+ssh key
+.github

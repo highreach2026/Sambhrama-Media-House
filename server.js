@@ -47,6 +47,9 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = path.join(appRoot, reqPath);
+  if (!fs.existsSync(filePath) && reqPath.startsWith("/_nuxt/")) {
+    filePath = path.join(appRoot, reqPath.replace("/_nuxt/", "/nuxt/"));
+  }
   if (!fs.existsSync(filePath) && fs.existsSync(filePath + ".html")) {
     filePath += ".html";
   }

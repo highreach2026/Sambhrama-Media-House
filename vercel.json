@@ -1,3 +1,15 @@
 {
-  "buildCommand": "node build.js"
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/_nuxt/:path*", "destination": "/nuxt/:path*" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "/dark/creative-agency", "permanent": false },
+    { "source": "/index", "destination": "/dark/creative-agency", "permanent": false },
+    { "source": "/home", "destination": "/dark/creative-agency", "permanent": false },
+    { "source": "/creative-agency", "destination": "/dark/creative-agency", "permanent": false },
+    { "source": "/contact", "destination": "/dark/contact", "permanent": false }
+  ]
 }
