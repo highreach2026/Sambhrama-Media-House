@@ -18,6 +18,7 @@ dist/
 .output/
 .nuxt/
 .cache/
+.vercel/
 
 # Logs
 logs/

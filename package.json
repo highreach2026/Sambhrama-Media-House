@@ -4,6 +4,7 @@
   "private": true,
   "description": "Sambhrama Media House - Film Production, Dubbing & Recording Studio in Bengaluru",
   "scripts": {
+    "build": "node build.js",
     "start": "node server.js"
   }
 }
