@@ -204,3 +204,25 @@
   text-transform: uppercase !important;
   margin-top: 10px !important;
 }
+
+.studio-team-bio {
+  max-width: 820px !important;
+  margin: 30px auto 0 auto !important;
+  text-align: left !important;
+  padding: 0 15px !important;
+}
+.studio-team-bio p {
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-bottom: 14px !important;
+  font-weight: 400 !important;
+}
+.studio-team-bio .bio-attribution {
+  font-size: 14px !important;
+  color: #ff7d29 !important;
+  font-style: italic !important;
+  text-align: right !important;
+  display: block !important;
+  font-weight: 500 !important;
+}
